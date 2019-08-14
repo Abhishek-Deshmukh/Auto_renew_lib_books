@@ -32,7 +32,7 @@ for row in rows:
         if check_possibility_to_renew(row):
             renew_link=get_renew_link(row)
             # sending the renew request
-            book_list_page = sess.get('http://10.0.2.254:8001'+renew)
+            book_list_page = sess.get('http://10.0.2.254:8001'+renew_link)
         else:
             notify_via_email()
     else:
